@@ -77,13 +77,11 @@ var view = function(){
           // Find object's respective timeline and push template in it.
           $("div#"+objectInfo.info.uniqueId)
           .find("ul.timeline")
-          .html($.parseHTML(timeline_template));
+          .html(timeline_template);
         
         }
         
       }
-      
-      console.log("finished");
   
     };
 
