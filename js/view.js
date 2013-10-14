@@ -44,6 +44,8 @@ var view = function(){
         // Insert new instance's properties to its new created empty layout.
         $("div#"+objectInfo.info.uniqueId).append(template);
         
+        console.log("appended");
+        
       }
         
       var
@@ -78,7 +80,7 @@ var view = function(){
         
       }
       
-      console.log("inserted");
+      console.log("finished");
   
     };
 
