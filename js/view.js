@@ -60,7 +60,6 @@ var view = function(){
         
       }
       
-      
       // If any added value exists re-render and overwrite it to HTML.
       if (addedInfoLength > 0) {
       
