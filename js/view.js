@@ -8,9 +8,7 @@ var view = function(){
       if (method==="html") {
   
         // To avoid to loop through all info.
-        var
-          initialInfo = ["id","age","sex","location"],
-          addedInfo   = $.extend(true,{},objectInfo.infoHistory.added);
+        var initialInfo = ["id","age","sex","location"];
         
         for (var key in initialInfo) {
         
