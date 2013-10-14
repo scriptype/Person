@@ -38,7 +38,7 @@ var view = function(){
         $(template).find("span.sex").text(objectInfo.info.sex);
         $(template).find("span.location").text(objectInfo.info.location);
         
-        // Append a div with object's uniqueId inhto target element.
+        // Append a div with object's uniqueId into target element.
         element.append("<div class='person' id='"+objectInfo.info.uniqueId+"'></div>");
         
         // Insert new instance's properties to its new created empty layout.
