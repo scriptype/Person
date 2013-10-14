@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Dene</title>
+<link rel="stylesheet" href="css/css.css" />
+</head>
+
+<body>
+
+  <script type="text/template" id="person_template">
+    <div class="profile_info">
+      <h1 class="id">{{Name}}</h1>
+      <h2>
+        <span class="age">{{Age}}</span>, 
+        <span class="sex">{{Sex}}</span>, 
+        <span class="location">{{Location}}</span>
+      </h2>
+    </div>
+    <ul class="timeline"></ul>
+  </script>
+  
+  <div id="people"></div>
+  
+  <script type="text/javascript" src="js/view.js" charset="utf-8"></script>
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="js/global.js" charset="utf-8"></script>
+  
+</body>
+</html>
