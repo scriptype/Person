@@ -47,7 +47,8 @@ var view = function(){
         console.log("appended");
         
       }
-        
+      
+      // Get length of properties in added.  
       var
         addedInfo       = objectInfo.infoHistory.added,
         addedInfoLength = 0;
@@ -59,19 +60,22 @@ var view = function(){
         
       }
       
-      if (addedInfoLength > 0)
-      {
+      
+      // If any added value exists re-render and overwrite it to HTML.
+      if (addedInfoLength > 0) {
       
         var timeline_template = "";
       
         for (var key in addedInfo) {
-        
+          
+          // Append log to timeline template for each added data.
           timeline_template += "<li>"
                                +objectInfo.info.id+
                                " has set "+key+" as "+
                                "<span>"+addedInfo[key]+"</span>"+
                                "</li>"
         
+          // Find object's respective timeline and push template in it.
           $("div#"+objectInfo.info.uniqueId)
           .find("ul.timeline")
           .html($.parseHTML(timeline_template));
@@ -113,6 +117,9 @@ var view = function(){
     }
     
   }
+
+
+// Old shit.
 
 //var view = function(modelObject){
 
