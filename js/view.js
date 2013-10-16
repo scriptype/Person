@@ -87,30 +87,25 @@ var view = function(){
 
   // Loop through each personObject in localStorage.
   for (var personObject in localStorage) {
-  
-    // Check if any personObject exists.
-    if(personObject) {
     
-      var
-        person      = JSON.parse( localStorage[personObject] ),
-        template    = $.parseHTML( $("script#person_template").text() );
-      
-      // Look for personObjects that have contents in HTML.
-      if ( $("div#"+person.info.uniqueId).text() !== "" ) {
-      
-        // Send person to htmlize to look for differences between DOM and person.info.
-        htmlize(person, "html");
-        
-      }
-      
-      // If there are personObjects which are not passed to HTML yet.
-      else {
-      
-        // Add new instance to HTML with .append()
-        htmlize(person, "append", template);
-        
-      }
+    var
+      person      = JSON.parse( localStorage[personObject] ),
+      template    = $.parseHTML( $("script#person_template").text() );
     
+    // Look for personObjects that have contents in HTML.
+    if ( $("div#"+person.info.uniqueId).text() !== "" ) {
+    
+      // Send person to htmlize to look for differences between DOM and person.info.
+      htmlize(person, "html");
+      
+    }
+    
+    // If there are personObjects which are not passed to HTML yet.
+    else {
+    
+      // Add new instance to HTML with .append()
+      htmlize(person, "append", template);
+      
     }
     
   }
